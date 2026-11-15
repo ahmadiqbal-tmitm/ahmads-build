@@ -69,9 +69,25 @@
       white-space: nowrap;
     }
     .more { margin-top: 32px; color: #777; font-size: 15px; }
+    .recognition { margin-top: 48px; padding-top: 32px; border-top: 1px solid #e5e2dc; }
+    .recognition h2 { font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #777; margin-bottom: 8px; }
+    .recognition .lead { color: #555; font-size: 16px; margin-bottom: 16px; }
+    .awards { list-style: none; }
+    .awards li { border-top: 1px solid #eeebe5; }
+    .awards li:first-child { border-top: none; }
+    .awards a { display: flex; align-items: center; gap: 14px; padding: 12px 0; color: #1a1a1a; text-decoration: none; }
+    .awards .mark { flex: none; width: 40px; height: 40px; border-radius: 8px; background: #fff; border: 1px solid #e5e2dc; display: flex; align-items: center; justify-content: center; }
+    .awards .mark img { max-width: 26px; max-height: 26px; display: block; }
+    .awards .text { flex: 1; min-width: 0; }
+    .awards .mark img[src$=".svg"] { max-height: 30px; }
+    .awards a:hover .award { text-decoration: underline; }
+    .awards .award { font-weight: 600; font-size: 16px; }
+    .awards .detail { display: block; font-weight: 400; color: #666; font-size: 14px; }
+    .awards .src { color: #777; font-size: 14px; white-space: nowrap; align-self: baseline; }
     footer { text-align: center; padding: 40px 24px; color: #888; font-size: 14px; }
     @media (prefers-reduced-motion: reduce) { .card { transition: none; } }
     @media (max-width: 520px) {
+      .awards .src { display: none; }
       h1 { font-size: 30px; }
       .nav-links { gap: 12px; }
       nav { padding: 16px; gap: 12px; }
@@ -104,6 +120,25 @@
       Now I'm on a new path,
       building one AI agent a week, in public. I aim to spend the next year building for a post-SaaS world.
     </p>
+
+    <section class="recognition" aria-labelledby="recognition-title">
+      <h2 id="recognition-title">Recognition</h2>
+      <p class="lead">Canva Magic Studio, the AI product suite I helped lead, was recognized by:</p>
+      <ul class="awards">
+        <li><a href="https://time.com/collections/best-inventions-2024/7094550/canva-magic-studio/" target="_blank" rel="noopener">
+          <span class="mark"><img src="/assets/awards/time.png" alt="" width="26" height="26"></span>
+          <span class="text"><span class="award">TIME Best Inventions of 2024</span><span class="detail">Apps &amp; Software</span></span>
+          <span class="src">TIME ↗</span></a></li>
+        <li><a href="https://www.fastcompany.com/91126823/canva-innovation-by-design-2024" target="_blank" rel="noopener">
+          <span class="mark"><img src="/assets/awards/fast-company.png" alt="" width="26" height="26"></span>
+          <span class="text"><span class="award">Innovation by Design Awards 2024</span><span class="detail">Winner, for an all-in-one AI tool for creativity</span></span>
+          <span class="src">Fast Company ↗</span></a></li>
+        <li><a href="https://winners.webbyawards.com/2024/ai-metaverse-virtual/ai-apps-and-experiences/work-productivity/293782/magic-studio" target="_blank" rel="noopener">
+          <span class="mark"><img src="/assets/awards/webby.svg" alt="" width="26" height="26"></span>
+          <span class="text"><span class="award">Webby Winner &amp; People's Voice Winner 2024</span><span class="detail">AI Apps &amp; Experiences: Work &amp; Productivity</span></span>
+          <span class="src">The Webby Awards ↗</span></a></li>
+      </ul>
+    </section>
   </main>
 
   <footer>ahmads.build</footer>
