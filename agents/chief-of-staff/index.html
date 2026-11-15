@@ -87,21 +87,17 @@
         <h3>1. Download the skill</h3>
         <p>Download <a href="/agents/chief-of-staff/chief-of-staff.zip" download>chief-of-staff.zip</a> from this page. Don't unzip it.</p>
 
-        <h3>2. Turn on file creation in Claude</h3>
-        <p>In Claude, go to <strong>Settings &gt; Capabilities</strong> and turn on <strong>Code execution and file creation</strong> (it may be called <strong>Create and edit files</strong>). Skills need this switched on.</p>
-
-        <h3>3. Add the skill</h3>
+        <h3>2. Add the skill</h3>
         <ol class="steps">
           <li>Go to <strong>Customize &gt; Skills</strong>.</li>
-          <li>Click <strong>+</strong>, then <strong>Create skill</strong>.</li>
-          <li>Choose <strong>Upload a skill</strong> and pick the ZIP file.</li>
+          <li>Click <strong>+ Add</strong>, choose <strong>Upload a skill</strong>, and pick the ZIP file.</li>
           <li>Find <strong>chief-of-staff</strong> in your list and switch it on.</li>
         </ol>
 
-        <h3>4. Connect your email and calendar</h3>
+        <h3>3. Connect your email and calendar</h3>
         <p>In Claude's settings, open <strong>Connectors</strong> and connect <strong>Gmail</strong> and <strong>Google Calendar</strong>. Sign in with the Google account you use every day.</p>
 
-        <h3>5. Create a Project</h3>
+        <h3>4. Create a Project</h3>
         <p>Create a new Project called <strong>Chief of Staff</strong>. Inside it, start a chat and say:</p>
         <div class="code-wrap">
           <div class="code-label"><span>Prompt</span><button class="copy-btn btn btn-outline" type="button">Copy</button></div>
@@ -109,7 +105,7 @@
         </div>
         <p>It asks you eight short questions about how you work, then writes your brief. Paste the brief into the Project's instructions, exactly as it tells you. That's what makes it remember you in every conversation.</p>
 
-        <h3>6. Use it every day</h3>
+        <h3>5. Use it every day</h3>
         <p>Inside the Project, say:</p>
         <div class="code-wrap">
           <div class="code-label"><span>Prompt</span><button class="copy-btn btn btn-outline" type="button">Copy</button></div>
@@ -144,6 +140,8 @@
       <section class="section" aria-labelledby="wrong">
         <h2 id="wrong">If something goes wrong</h2>
         <dl class="terms">
+          <dt>Skills is greyed out, or there's no upload option</dt>
+          <dd>Open <strong>Settings &gt; Capabilities</strong> and turn on code execution. On a Team or Enterprise plan, ask whoever manages your Claude account to switch on skills.</dd>
           <dt>The upload fails</dt>
           <dd>Make sure you uploaded the ZIP as downloaded, without unzipping or renaming it.</dd>
           <dt>It can't see your email or calendar</dt>
