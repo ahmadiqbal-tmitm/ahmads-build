@@ -18,8 +18,15 @@
     if (isLocal()) return Promise.resolve();
     if (!ENDPOINT) return Promise.reject(new Error('not connected'));
     var body = new URLSearchParams({ email: email, source: source, page: location.origin + location.pathname });
-    // Apps Script doesn't send CORS headers, so the reply can't be read; a network failure still rejects.
-    return fetch(ENDPOINT, { method: 'POST', mode: 'no-cors', body: body });
+    // Hand the email to the browser to deliver in the background and unlock straight away:
+    // Google's script takes several seconds to reply, and its reply can't be read anyway.
+    // sendBeacon / keepalive keep delivering even if a download starts or the page changes.
+    var queued = false;
+    try { queued = !!(navigator.sendBeacon && navigator.sendBeacon(ENDPOINT, body)); } catch (e) {}
+    if (!queued) {
+      try { fetch(ENDPOINT, { method: 'POST', mode: 'no-cors', keepalive: true, body: body }).catch(function () {}); } catch (e) {}
+    }
+    return Promise.resolve();
   }
 
   var uid = 0;
