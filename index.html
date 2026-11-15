@@ -25,16 +25,12 @@
     .agent-tile .btn { align-self: flex-start; margin-top: auto; }
     .agent-tile .btn:hover { background: var(--cobalt); border-color: var(--cobalt); color: var(--on-cobalt); }
     .agent-tile p { margin-bottom: var(--space-2); }
-    .home-cards { padding-bottom: var(--space-24); }
-    /* Not-yet-live card: sits where the link would be, greyed out and not clickable. */
-    .card-soon { margin-top: auto; padding-top: var(--space-2); font-weight: 600; color: var(--ink-muted); cursor: default; }
     @media (max-width: 1024px) {
       .agent-tiles { grid-template-columns: 1fr; }
     }
     @media (max-width: 720px) {
       .hero { padding-top: var(--space-12); padding-bottom: var(--space-6); }
       .hero .support { font-size: 17px; line-height: 28px; }
-      .home-cards { padding-bottom: var(--space-12); }
     }
   </style>
 </head>
@@ -79,26 +75,27 @@
       </ul>
     </section>
 
-    <section class="home-cards container" aria-label="What's on the site">
-      <div class="cards">
-        <article class="card">
-          <h2 class="h3">Agents</h2>
-          <p>Ready-made agents to install in Claude. No code needed.</p>
-          <a href="/agents/" class="card-link">Install an agent</a>
-        </article>
-        <article class="card">
-          <h2 class="h3">Writing</h2>
-          <p>Weekly notes on what I'm building and learning.</p>
-          <span class="card-soon">Coming soon</span>
-        </article>
-        <article class="card">
-          <h2 class="h3">Build with me</h2>
-          <p>Templates and guides to build your own agents.</p>
-          <a href="/resources/" class="card-link">See the guides</a>
-        </article>
-      </div>
-    </section>
   </main>
+  <section class="site-cards container" aria-label="Explore the site">
+    <div class="cards">
+      <article class="card">
+        <h2 class="h3">Writing</h2>
+        <p>Weekly notes on what I'm building and learning.</p>
+        <span class="card-soon">Coming soon</span>
+      </article>
+      <article class="card">
+        <h2 class="h3">Build with me</h2>
+        <p>Templates and guides to build your own agents.</p>
+        <a href="/resources/" class="card-link">See the guides</a>
+      </article>
+      <article class="card">
+        <h2 class="h3">Agents</h2>
+        <p>Ready-made agents to install in Claude. No code needed.</p>
+        <a href="/agents/" class="card-link">Install an agent</a>
+      </article>
+    </div>
+  </section>
+
 
   <footer class="site-footer on-dark">
     <div class="container">

@@ -144,6 +144,11 @@ a:hover { text-decoration-thickness: 2px; }
   border-radius: var(--radius-sm); padding: 2px var(--space-2);
 }
 
+/* Site cards: Writing / Build with me / Agents, shown above the footer on every page */
+.site-cards { padding-bottom: var(--space-24); }
+/* Not-yet-live card: sits where the link would be, greyed out and not clickable. */
+.card-soon { margin-top: auto; padding-top: var(--space-2); font-weight: 600; color: var(--ink-muted); cursor: default; }
+
 /* Page sections */
 .page { padding: var(--space-24) 0; }
 .page-intro { margin-top: var(--space-4); }
@@ -170,6 +175,7 @@ a:hover { text-decoration-thickness: 2px; }
   h2 { font-size: 28px; line-height: 34px; }
   h3, .h3 { font-size: 20px; line-height: 28px; }
   .page { padding: var(--space-12) 0; }
+  .site-cards { padding-bottom: var(--space-12); }
 
   .nav { gap: var(--space-2); min-height: 64px; flex-wrap: wrap; }
   .nav .logo img { height: 24px; }
