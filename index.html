@@ -18,6 +18,7 @@
     .hero .support { margin-top: var(--space-6); font-size: 20px; line-height: 30px; }
     .hero .actions { margin-top: var(--space-6); display: flex; flex-wrap: wrap; gap: var(--space-4); }
     .home-cards { padding-bottom: var(--space-24); }
+    @media (min-width: 1025px) { .home-cards .cards { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 720px) {
       .hero { padding-top: var(--space-12); padding-bottom: var(--space-6); }
       .hero .support { font-size: 17px; line-height: 28px; }
@@ -33,7 +34,7 @@
       <a href="/" class="logo"><img src="/images/logo.png" alt="Build 52 by Ahmad Iqbal – home" width="107" height="32"></a>
       <div class="nav-menu" id="nav-menu">
         <a href="/about/">About</a>
-        <a href="/resources/">Resources</a>
+        <a href="/resources/">Build with me</a>
         <a href="https://www.linkedin.com/in/ahmadiqbal1" class="btn btn-outline" target="_blank" rel="noopener">LinkedIn</a>
       </div>
       <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2LftEg_0td3W-pWEFQwLBZ6LC8GmgLlSoYkhCQzig38rFytq_mOt4pI7OCqQhuaOxfuIOIdP54" class="btn btn-primary">Book a call</a>
@@ -61,13 +62,8 @@
           <p>Weekly notes on what I'm building and learning.</p>
         </article>
         <article class="card">
-          <p class="eyebrow muted">Coming soon</p>
-          <h2 class="h3">Builds</h2>
-          <p>The agents and apps I've shipped, with demos you can try.</p>
-        </article>
-        <article class="card">
           <p class="eyebrow">New</p>
-          <h2 class="h3">Resources</h2>
+          <h2 class="h3">Build with me</h2>
           <p>Templates and guides to build your own agents.</p>
           <a href="/resources/" class="card-link">See the guides</a>
         </article>
@@ -80,7 +76,7 @@
       <p class="main-line">From AI happening to you, to AI working for you.</p>
       <ul class="footer-links">
         <li><a href="/about/">About</a></li>
-        <li><a href="/resources/">Resources</a></li>
+        <li><a href="/resources/">Build with me</a></li>
         <li><a href="/office-hours/">Office hours</a></li>
         <li><a href="https://www.linkedin.com/in/ahmadiqbal1" target="_blank" rel="noopener">LinkedIn</a></li>
       </ul>
