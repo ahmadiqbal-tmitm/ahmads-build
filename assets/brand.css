@@ -149,6 +149,39 @@ a:hover { text-decoration-thickness: 2px; }
 /* Not-yet-live card: sits where the link would be, greyed out and not clickable. */
 .card-soon { margin-top: auto; padding-top: var(--space-2); font-weight: 600; color: var(--ink-muted); cursor: default; }
 
+/* Email gate (assets/gate.js): form follows the brand Forms spec */
+.gate-form label { display: block; margin-bottom: var(--space-2); font: 600 15px/24px var(--font-sans); letter-spacing: 0.01em; }
+.gate-row { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.gate-row input {
+  flex: 1 1 220px; min-width: 0; min-height: 48px; padding: 12px;
+  background: var(--card); color: var(--ink);
+  border: 2px solid var(--ink-muted); border-radius: var(--radius-sm);
+  font: 400 17px/24px var(--font-sans);
+}
+.gate-row input:focus { border-color: var(--cobalt); outline: 3px solid var(--ink); outline-offset: 2px; }
+.gate-row .btn { flex: 0 0 auto; }
+.gate-error { margin-top: var(--space-2); color: var(--vermilion-deep); font-weight: 600; }
+.gate-error:empty { display: none; }
+.gate-help { margin-top: var(--space-2); }
+.gate-trap { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.gate-dialog {
+  width: min(480px, calc(100% - 32px)); padding: var(--space-6);
+  background: var(--cream); color: var(--ink);
+  border: 1px solid var(--line); border-radius: var(--radius-md);
+}
+.gate-dialog::backdrop { background: rgba(22, 22, 31, 0.6); }
+.gate-dialog .h3 { margin-top: var(--space-2); }
+.gate-lead { margin: var(--space-2) 0 var(--space-4); }
+.gate-close {
+  position: absolute; top: var(--space-2); right: var(--space-2);
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 44px; height: 44px; padding: 0;
+  background: transparent; color: var(--ink); border: 0; border-radius: var(--radius-md); cursor: pointer;
+}
+.gate-card { margin-top: var(--space-6); }
+[data-gate="post"] [tabindex="-1"]:focus { outline: none; } /* focus moves here after unlocking; no ring on plain text */
+.gate-card .gate-form { margin-top: var(--space-2); }
+
 /* Page sections */
 .page { padding: var(--space-24) 0; }
 .page-intro { margin-top: var(--space-4); }

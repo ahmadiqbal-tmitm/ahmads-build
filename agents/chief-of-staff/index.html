@@ -10,8 +10,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/brand.css?v=ed1ff551">
+  <link rel="stylesheet" href="/assets/brand.css?v=e267f968">
   <script src="/assets/site.js?v=22e58986" defer></script>
+  <script src="/assets/gate.js?v=80150e3e" defer></script>
   <style>
     .back { display: inline-flex; align-items: center; min-height: 44px; margin-bottom: var(--space-4); }
     .agent-avatar { display: block; width: 96px; height: 96px; border-radius: var(--radius-md); margin-bottom: var(--space-2); }
@@ -66,7 +67,7 @@
       <h1>Your own AI chief of staff</h1>
       <p class="page-intro">Your own AI chief of staff, inside the Claude app. Each morning it tells you what needs your attention and what to do first. It sorts your inbox, protects the time you care about, helps you prepare for meetings and think through decisions. It never sends an email or changes your calendar without your clear yes.</p>
       <div class="actions">
-        <a href="/agents/chief-of-staff/chief-of-staff.zip" class="btn btn-warm" download>Download the skill</a>
+        <a href="/agents/chief-of-staff/chief-of-staff.zip" class="btn btn-warm" download data-gate="agent">Download the skill</a>
       </div>
       <p class="caption">chief-of-staff.zip · 9 KB · Prefer to build it yourself? <a href="https://chiefofstaff.ahmads.build">Follow the tutorial</a>.</p>
 
@@ -83,7 +84,7 @@
         <h2 id="setup">Set it up</h2>
 
         <h3>1. Download the skill</h3>
-        <p>Download <a href="/agents/chief-of-staff/chief-of-staff.zip" download>chief-of-staff.zip</a> from this page. Don't unzip it.</p>
+        <p>Download <a href="/agents/chief-of-staff/chief-of-staff.zip" download data-gate="agent">chief-of-staff.zip</a> from this page. Don't unzip it.</p>
 
         <h3>2. Add the skill</h3>
         <ol class="steps">
