@@ -4,119 +4,74 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resources | ahmads.build</title>
-  <link rel="icon" type="image/png" href="/assets/favicon.png" media="(prefers-color-scheme: light)">
-  <link rel="icon" type="image/png" href="/assets/favicon-light.png" media="(prefers-color-scheme: dark)">
   <meta name="description" content="Step-by-step guides and copy-paste templates to build your own AI agents. No code needed.">
+  <link rel="icon" type="image/png" href="/images/favicon.png" media="(prefers-color-scheme: light)">
+  <link rel="icon" type="image/png" href="/images/favicon-light.png" media="(prefers-color-scheme: dark)">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/brand.css">
+  <script src="/assets/site.js" defer></script>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: #faf9f7;
-      color: #1a1a1a;
-      line-height: 1.6;
-    }
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 24px;
-      max-width: 960px;
-      margin: 0 auto;
-    }
-    .logo { display: flex; align-items: center; text-decoration: none; }
-    .logo img { height: 32px; width: auto; display: block; }
-    .nav-links { display: flex; align-items: center; gap: 16px; }
-    .nav-links a { color: #1a1a1a; text-decoration: none; font-size: 15px; }
-    .nav-links a:hover { text-decoration: underline; }
-    .nav-links a.btn {
-      background: #1a1a1a;
-      color: #fff;
-      padding: 10px 18px;
-      border-radius: 8px;
-      font-weight: 600;
-    }
-    .nav-links a.btn:hover { background: #333; text-decoration: none; }
-    a:focus-visible { outline: 3px solid #1a1a1a; outline-offset: 3px; border-radius: 8px; }
-    main { max-width: 720px; margin: 0 auto; padding: 64px 24px; }
-    .back { display: inline-block; color: #555; font-size: 15px; text-decoration: none; margin-bottom: 24px; }
-    .back:hover { text-decoration: underline; }
-    h1 { font-size: 40px; line-height: 1.2; margin-bottom: 20px; }
-    .intro { font-size: 19px; color: #444; margin-bottom: 40px; }
-    .cards { display: grid; gap: 16px; }
-    .card {
-      display: block;
-      background: #fff;
-      border: 1px solid #e5e2dc;
-      border-radius: 12px;
-      padding: 24px;
-      text-decoration: none;
-      color: #1a1a1a;
-      transition: border-color 0.2s;
-    }
-    .card:hover { border-color: #1a1a1a; }
-    .card-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 6px; }
-    .card h2 { font-size: 20px; }
-    .card p { color: #555; font-size: 16px; }
-    .card .meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
-    .card .cta { margin-top: 16px; font-weight: 600; font-size: 15px; }
-    .tag {
-      font-size: 12px;
-      font-weight: 600;
-      background: #f0ede7;
-      color: #6b6558;
-      padding: 4px 10px;
-      border-radius: 999px;
-      white-space: nowrap;
-    }
-    .more { margin-top: 32px; color: #777; font-size: 15px; }
-    footer { text-align: center; padding: 40px 24px; color: #888; font-size: 14px; }
-    @media (prefers-reduced-motion: reduce) { .card { transition: none; } }
-    @media (max-width: 520px) {
-      h1 { font-size: 30px; }
-      .nav-links { gap: 12px; }
-      nav { padding: 16px; gap: 12px; }
-      .logo img { height: 24px; }
-      .nav-links a { font-size: 14px; }
-      .nav-links a.btn { padding: 8px 12px; font-size: 14px; white-space: nowrap; }
-    }
+    .back { display: inline-flex; align-items: center; min-height: 44px; margin-bottom: var(--space-4); }
+    .res-cards { margin-top: var(--space-12); grid-template-columns: 1fr; }
+    .more { margin-top: var(--space-6); color: var(--ink-muted); }
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <nav>
-    <a href="/" class="logo"><img src="/assets/logo.png" alt="Build 52 by Ahmad Iqbal – home" width="107" height="32"></a>
-    <div class="nav-links">
-      <a href="/about">About</a>
-      <a href="https://www.linkedin.com/in/ahmadiqbal1" target="_blank">LinkedIn</a>
-      <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2LftEg_0td3W-pWEFQwLBZ6LC8GmgLlSoYkhCQzig38rFytq_mOt4pI7OCqQhuaOxfuIOIdP54" class="btn">Book office hours</a>
-    </div>
-  </nav>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main">
+      <a href="/" class="logo"><img src="/images/logo.png" alt="Build 52 by Ahmad Iqbal – home" width="107" height="32"></a>
+      <div class="nav-menu" id="nav-menu">
+        <a href="/about/">About</a>
+        <a href="/resources/" aria-current="page">Resources</a>
+        <a href="https://www.linkedin.com/in/ahmadiqbal1" class="btn btn-outline" target="_blank" rel="noopener">Follow on LinkedIn</a>
+      </div>
+      <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2LftEg_0td3W-pWEFQwLBZ6LC8GmgLlSoYkhCQzig38rFytq_mOt4pI7OCqQhuaOxfuIOIdP54" class="btn btn-primary">Book office hours</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Menu">
+        <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M2 5h16M2 10h16M2 15h16" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+      </button>
+    </nav>
+  </header>
 
-  <main>
-    <a href="/" class="back">← Home</a>
-    <h1>Resources</h1>
-    <p class="intro">
-      Step-by-step guides and copy-paste templates to build your own AI agents.
-      No code, no jargon. Written so anyone can follow along.
-    </p>
+  <main id="main" class="page">
+    <div class="container"><div class="reading">
+      <a href="/" class="back">← Home</a>
+      <h1>Resources</h1>
+      <p class="page-intro">Step-by-step guides and copy-paste templates to build your own AI agents. No code, no jargon. Written so anyone can follow along.</p>
 
-    <div class="cards">
-      <a href="https://chiefofstaff.ahmads.build" class="card">
-        <div class="card-top"><h2>Chief of Staff agent</h2><span class="tag">Agent #1</span></div>
-        <p>A personal assistant that briefs you each morning, sorts your inbox, protects your time and helps you think through decisions.</p>
-        <div class="meta">
-          <span class="tag">About 60 minutes</span>
-          <span class="tag">No code</span>
-          <span class="tag">Template included</span>
-        </div>
-        <p class="cta">Start the tutorial →</p>
-      </a>
-    </div>
+      <div class="cards res-cards">
+        <article class="card">
+          <p class="eyebrow">Agent #1</p>
+          <h2 class="h3">Chief of Staff agent</h2>
+          <p>A personal assistant that briefs you each morning, sorts your inbox, protects your time and helps you think through decisions.</p>
+          <ul class="tags" aria-label="Details" style="list-style:none;padding:0;margin:var(--space-2) 0 0;">
+            <li class="tag">About 60 minutes</li>
+            <li class="tag">No code</li>
+            <li class="tag">Template included</li>
+          </ul>
+          <a href="https://chiefofstaff.ahmads.build" class="card-link">Start the tutorial</a>
+        </article>
+      </div>
 
-    <p class="more">A new guide every week, as I build each agent.</p>
+      <p class="more">A new guide every week, as I build each agent.</p>
+    </div></div>
   </main>
 
-  <footer>ahmads.build</footer>
+  <footer class="site-footer on-dark">
+    <div class="container">
+      <p class="main-line">From AI happening to you, to AI working for you.</p>
+      <ul class="footer-links">
+        <li><a href="/about/">About</a></li>
+        <li><a href="/resources/">Resources</a></li>
+        <li><a href="/office-hours/">Office hours</a></li>
+        <li><a href="https://www.linkedin.com/in/ahmadiqbal1" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+      <p class="copyright">© 2026 Ahmad Iqbal · ahmads.build</p>
+    </div>
+  </footer>
 
 </body>
 </html>
