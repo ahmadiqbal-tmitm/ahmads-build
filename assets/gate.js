@@ -117,8 +117,8 @@
 
   // Posts and tutorials: show the opening, hide the rest behind the box
   var BLOCKS = {
-    post: { text: 'Enter your email to read the rest of this post. It also unlocks every agent on the site.', button: 'Read the rest' },
-    tutorial: { text: 'Enter your email to see the full tutorial, step by step, with every prompt to copy.', button: 'Show the tutorial' }
+    post: { text: 'Your email unlocks the rest of this post, and everything else on this site.', button: 'Read the rest' },
+    tutorial: { text: 'Your email unlocks the full tutorial, with every prompt to copy.', button: 'Show the tutorial' }
   };
   document.querySelectorAll('[data-gate="post"], [data-gate="tutorial"]').forEach(function (rest) {
     if (isUnlocked()) return;
