@@ -80,6 +80,8 @@
     .awards .mark { flex: none; width: 40px; height: 40px; border-radius: 8px; background: #fff; border: 1px solid #e5e2dc; display: flex; align-items: center; justify-content: center; }
     .awards .mark img { max-width: 26px; max-height: 26px; display: block; }
     .awards .text { flex: 1; min-width: 0; }
+    .awards .mark.photo { overflow: hidden; }
+    .awards .mark.photo img { width: 100%; height: 100%; max-width: none; max-height: none; object-fit: cover; }
     .awards .mark img[src$=".svg"] { max-height: 30px; }
     .awards a:hover .award { text-decoration: underline; }
     .awards .award { font-weight: 600; font-size: 16px; }
@@ -126,7 +128,7 @@
 
     <section class="recognition" aria-labelledby="recognition-title">
       <h2 id="recognition-title">Recognition</h2>
-      <p class="lead">Canva Magic Studio, the AI product suite I helped lead, was recognized by:</p>
+      <p class="lead">Canva Magic Studio, the AI product suite I co-led and helped ship, was recognized by:</p>
       <ul class="awards">
         <li><a href="https://time.com/collections/best-inventions-2024/7094550/canva-magic-studio/" target="_blank" rel="noopener">
           <span class="mark"><img src="/assets/awards/time.png" alt="TIME logo" width="26" height="26"></span>
@@ -140,6 +142,10 @@
           <span class="mark"><img src="/assets/awards/webby.svg" alt="The Webby Awards trophy logo" width="26" height="26"></span>
           <span class="text"><span class="award">Webby Winner &amp; People's Voice Winner 2024</span><span class="detail">AI Apps &amp; Experiences: Work &amp; Productivity</span></span>
           <span class="src">The Webby Awards ↗</span></a></li>
+        <li><a href="https://www.youtube.com/watch?v=5Ee117o8X1M" target="_blank" rel="noopener">
+          <span class="mark photo"><img src="/assets/awards/canva-create-2023.jpg" alt="Ahmad Iqbal on stage at Canva Create 2023" width="40" height="40"></span>
+          <span class="text"><span class="award">Speaker, Canva Create 2023</span><span class="detail">Introduced Magic Write on stage</span></span>
+          <span class="src">YouTube ↗</span></a></li>
       </ul>
     </section>
   </main>
