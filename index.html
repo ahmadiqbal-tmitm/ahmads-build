@@ -18,6 +18,8 @@
     .hero .support { margin-top: var(--space-6); font-size: 20px; line-height: 30px; }
     .hero .actions { margin-top: var(--space-6); display: flex; flex-wrap: wrap; gap: var(--space-4); }
     .home-cards { padding-bottom: var(--space-24); }
+    /* Not-yet-live card: sits where the link would be, greyed out and not clickable. */
+    .card-soon { margin-top: auto; padding-top: var(--space-2); font-weight: 600; color: var(--ink-muted); cursor: default; }
     @media (max-width: 720px) {
       .hero { padding-top: var(--space-12); padding-bottom: var(--space-6); }
       .hero .support { font-size: 17px; line-height: 28px; }
@@ -57,18 +59,16 @@
     <section class="home-cards container" aria-label="What's on the site">
       <div class="cards">
         <article class="card">
-          <p class="eyebrow">New</p>
           <h2 class="h3">Agents</h2>
           <p>Ready-made agents to install in Claude. No code needed.</p>
           <a href="/agents/" class="card-link">Install an agent</a>
         </article>
         <article class="card">
-          <p class="eyebrow muted">Coming soon</p>
           <h2 class="h3">Writing</h2>
           <p>Weekly notes on what I'm building and learning.</p>
+          <span class="card-soon">Coming soon</span>
         </article>
         <article class="card">
-          <p class="eyebrow">New</p>
           <h2 class="h3">Build with me</h2>
           <p>Templates and guides to build your own agents.</p>
           <a href="/resources/" class="card-link">See the guides</a>
