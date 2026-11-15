@@ -17,9 +17,19 @@
     .hero .display { max-width: 16ch; margin-top: var(--space-4); }
     .hero .support { margin-top: var(--space-6); font-size: 20px; line-height: 30px; }
     .hero .actions { margin-top: var(--space-6); display: flex; flex-wrap: wrap; gap: var(--space-4); }
+    .latest { padding-bottom: var(--space-12); }
+    .latest h2 { margin-bottom: var(--space-6); }
+    .agent-tiles { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--space-4); grid-template-columns: repeat(3, 1fr); }
+    .agent-tile { display: flex; flex-direction: column; gap: var(--space-2); }
+    .agent-tile img { display: block; width: 80px; height: 80px; border-radius: var(--radius-md); margin-bottom: var(--space-2); }
+    .agent-tile .btn { align-self: flex-start; margin-top: auto; }
+    .agent-tile p { margin-bottom: var(--space-2); }
     .home-cards { padding-bottom: var(--space-24); }
     /* Not-yet-live card: sits where the link would be, greyed out and not clickable. */
     .card-soon { margin-top: auto; padding-top: var(--space-2); font-weight: 600; color: var(--ink-muted); cursor: default; }
+    @media (max-width: 1024px) {
+      .agent-tiles { grid-template-columns: 1fr; }
+    }
     @media (max-width: 720px) {
       .hero { padding-top: var(--space-12); padding-bottom: var(--space-6); }
       .hero .support { font-size: 17px; line-height: 28px; }
@@ -54,6 +64,18 @@
       <div class="actions">
         <a href="/agents/" class="btn btn-warm">See the agents</a>
       </div>
+    </section>
+
+    <section class="latest container" aria-labelledby="latest-title">
+      <h2 id="latest-title">Latest agents</h2>
+      <ul class="agent-tiles">
+        <li class="card agent-tile">
+          <img src="/images/agents/chief-of-staff.png" alt="" width="80" height="80">
+          <h3>Chief of staff</h3>
+          <p>Morning briefings, inbox sorting, meeting prep and a thought partner, working with Gmail and Google Calendar.</p>
+          <a href="/agents/chief-of-staff/" class="btn btn-outline" aria-label="Install the chief of staff agent">Install</a>
+        </li>
+      </ul>
     </section>
 
     <section class="home-cards container" aria-label="What's on the site">
