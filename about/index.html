@@ -69,6 +69,7 @@
       white-space: nowrap;
     }
     .more { margin-top: 32px; color: #777; font-size: 15px; }
+    .avatar { display: block; width: 120px; height: 120px; border-radius: 50%; object-fit: cover; background: #fff; border: 1px solid #e5e2dc; margin-bottom: 24px; }
     .recognition { margin-top: 48px; padding-top: 32px; border-top: 1px solid #e5e2dc; }
     .recognition h2 { font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #777; margin-bottom: 8px; }
     .recognition .lead { color: #555; font-size: 16px; margin-bottom: 16px; }
@@ -87,6 +88,7 @@
     footer { text-align: center; padding: 40px 24px; color: #888; font-size: 14px; }
     @media (prefers-reduced-motion: reduce) { .card { transition: none; } }
     @media (max-width: 520px) {
+      .avatar { width: 96px; height: 96px; margin-bottom: 20px; }
       .awards .src { display: none; }
       h1 { font-size: 30px; }
       .nav-links { gap: 12px; }
@@ -110,6 +112,7 @@
 
   <main>
     <a href="/" class="back">← Home</a>
+    <img class="avatar" src="/assets/ahmad.jpg" alt="Photo of Ahmad Iqbal" width="120" height="120">
     <h1>Hi, I'm Ahmad.</h1>
     <p class="intro" style="margin-bottom: 16px;">
       I've had the privilege of a varied professional life. Most recently I was Canva's first AI Product Manager, leading the zero-to-one launch of
