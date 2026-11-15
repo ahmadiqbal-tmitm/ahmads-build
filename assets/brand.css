@@ -155,7 +155,7 @@ a:hover { text-decoration-thickness: 2px; }
 .gate-row input {
   flex: 1 1 220px; min-width: 0; min-height: 48px; padding: 12px;
   background: var(--card); color: var(--ink);
-  border: 2px solid var(--ink-muted); border-radius: var(--radius-sm);
+  border: 2px solid var(--ink-muted); border-radius: var(--radius-md); /* matches the button beside it */
   font: 400 17px/24px var(--font-sans);
 }
 .gate-row input:focus { border-color: var(--cobalt); outline: 3px solid var(--ink); outline-offset: 2px; }

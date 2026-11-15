@@ -89,7 +89,7 @@
         '</button>' +
         '<p class="eyebrow">Free · No code</p>' +
         '<h2 id="gate-dialog-title" class="h3">Get the agent</h2>' +
-        '<p class="gate-lead">Enter your email and you\'re in. This unlocks every agent and post on the site.</p>';
+        '<p class="gate-lead">Your email unlocks everything on this site.</p>';
       dialog.appendChild(buildForm({
         source: 'agent',
         button: 'Get the agent',
