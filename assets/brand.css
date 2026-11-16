@@ -97,13 +97,15 @@ a:hover { text-decoration-thickness: 2px; }
   font: 600 15px/24px var(--font-sans); letter-spacing: 0.01em;
   border-radius: var(--radius-md); border: 2px solid transparent;
   text-decoration: none; cursor: pointer; white-space: nowrap;
+  /* Soft fade between normal and hover colours (turned off for people who ask for reduced motion) */
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 .btn-primary { background: var(--cobalt); color: var(--on-cobalt); }
-.btn-primary:hover { background: #1C3591; }
+.btn-primary:hover { background: var(--vermilion-deep); } /* cobalt → red */
 .btn-warm { background: var(--vermilion-deep); color: var(--on-cobalt); }
-.btn-warm:hover { background: #9A2116; }
+.btn-warm:hover { background: var(--cobalt); } /* red → cobalt */
 .btn-outline { background: transparent; color: var(--ink); border-color: var(--ink); }
-.btn-outline:hover { background: var(--ink); color: var(--on-ink); }
+.btn-outline:hover { background: var(--vermilion-deep); border-color: var(--vermilion-deep); color: var(--on-cobalt); } /* outline → red */
 
 /* Navigation */
 .site-header { background: var(--cream); border-bottom: 1px solid var(--line); }
