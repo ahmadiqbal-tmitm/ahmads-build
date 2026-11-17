@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Agents | ahmads.build</title>
-  <meta name="description" content="Ready-made AI agents you can add to Claude in about 20 minutes. Free, no code needed.">
+  <meta name="description" content="Ready-made AI agents you can add to Claude in 20 minutes or less. Free, no code needed.">
   <link rel="icon" type="image/png" href="/images/favicon.png" media="(prefers-color-scheme: light)">
   <link rel="icon" type="image/png" href="/images/favicon-light.png" media="(prefers-color-scheme: dark)">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,9 +46,21 @@
     <div class="container"><div class="reading">
       <a href="/" class="back">← Home</a>
       <h1>Install an agent</h1>
-      <p class="page-intro">Ready-made agents you can add to Claude in about 20 minutes. Each one is free, works inside the Claude app, and comes with plain-English setup steps. No code needed.</p>
+      <p class="page-intro">Ready-made agents you can add to Claude in 20 minutes or less. Each one is free, works inside the Claude app, and comes with plain-English setup steps. No code needed.</p>
 
       <div class="cards agent-cards">
+        <article class="card">
+          <img src="/images/agents/advisory-council.png" alt="Advisory Council avatar: a pixel-art owl in blue sunglasses" width="96" height="96" class="agent-avatar">
+          <p class="eyebrow">Week 02 · Advisory council</p>
+          <h2 class="h3">Your own AI advisory council</h2>
+          <p>Bring a decision to Socrates, Sun Tzu, Marshall McLuhan and Marcus Aurelius. Socrates asks one question, then each advisor answers in their own words.</p>
+          <ul class="tags" aria-label="Details">
+            <li class="tag">About 2 minutes</li>
+            <li class="tag">Custom connector</li>
+            <li class="tag">No code</li>
+          </ul>
+          <a href="https://advisorycouncil.ahmads.build" class="card-link" data-gate="agent">See how to add it</a>
+        </article>
         <article class="card">
           <img src="/images/agents/chief-of-staff.png" alt="Chief of staff avatar: a pixel-art cheetah in red sunglasses" width="96" height="96" class="agent-avatar">
           <p class="eyebrow">Week 01 · Chief of staff</p>
@@ -65,12 +77,13 @@
 
       <section class="section" aria-labelledby="how">
         <h2 id="how">How to add any agent</h2>
-        <p class="lead-in">Each agent has a ZIP file and a guide. In short:</p>
+        <p class="lead-in">Most agents have a ZIP file and a guide. In short:</p>
         <ol class="steps">
           <li>Download the agent's ZIP file.</li>
           <li>Go to <strong>Customize &gt; Skills</strong>, click <strong>+ Add</strong>, choose <strong>Upload a skill</strong>, and pick the ZIP.</li>
           <li>Switch it on, then follow that agent's guide.</li>
         </ol>
+        <p class="caption">Some agents, like the advisory council, are connectors: you paste one link into <strong>Settings &gt; Connectors</strong> and there is nothing to download. Their page shows the link.</p>
         <p class="caption">You need a Claude Pro or Max plan. If Skills is greyed out or there's no upload option, open <strong>Settings &gt; Capabilities</strong> and turn on code execution.</p>
       </section>
 
