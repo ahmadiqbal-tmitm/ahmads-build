@@ -223,8 +223,18 @@ a:hover { text-decoration-thickness: 2px; }
     padding: var(--space-2) 0 var(--space-2);
   }
   .nav-menu.open { display: flex; }
-  .nav-menu a:not(.btn) { border-top: 1px solid var(--line); }
-  .nav-menu .btn { margin-top: var(--space-2); }
+  /* Phone menu: every item is the same size, centred, with no button outline, so no item outranks another */
+  .nav-menu a:not(.btn), .nav-menu a.btn {
+    display: flex; align-items: center; justify-content: center;
+    min-height: 52px; margin: 0; padding: 0 var(--space-4);
+    font: 600 17px/24px var(--font-sans); letter-spacing: 0.01em;
+    color: var(--ink); text-decoration: none;
+    background: transparent; border: 0; border-top: 1px solid var(--line); border-radius: 0;
+  }
+  .nav-menu a:not(.btn):hover, .nav-menu a.btn:hover {
+    background: transparent; color: var(--ink);
+    text-decoration: underline; text-underline-offset: 3px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
