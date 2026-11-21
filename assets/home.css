@@ -1,0 +1,264 @@
+/* Home: one fixed, full-screen poster. Nothing scrolls. */
+
+/* 1vh, or the 'dynamic' viewport height where the browser supports it
+   (it accounts for phone toolbars). */
+:root { --vh: 1vh; }
+@supports (height: 1dvh) {
+  :root { --vh: 1dvh; }
+}
+
+html.is-home,
+html.is-home body {
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+html.is-home body {
+  position: fixed;
+  inset: 0;
+  height: calc(100 * var(--vh));
+  display: flex;
+  flex-direction: column;
+  background: var(--airwave);
+}
+
+.is-home .banner { flex: none; }
+
+.poster {
+  --edge: clamp(16px, 3vw, 48px);
+  /* Distance from the bottom of the poster to the top of the headline.
+     A small script measures the real value; this is the fallback. */
+  --statement-clear: 220px;
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
+  background: var(--airwave);
+  isolation: isolate;
+}
+
+/* The picture: sky, stars, hills, objects */
+.scene { position: absolute; inset: 0; z-index: 0; }
+
+.layer {
+  position: absolute;
+  display: block;
+  max-width: none;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.stars { inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
+.hills {
+  left: 50%;
+  bottom: 0;
+  translate: -50% 0;
+  width: 100%;
+  min-width: 1100px;
+  height: auto;
+  max-height: 62%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* Objects are clickable: each opens the page of its pill. */
+.obj { position: absolute; z-index: 1; pointer-events: auto; cursor: pointer; }
+.obj-inner {
+  display: block;
+  animation: float var(--dur, 10s) ease-in-out var(--delay, 0s) infinite;
+  will-change: transform;
+}
+.obj img {
+  display: block;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* The agents ride in discs, like moons: a flat colour, a thick ink outline. */
+.disc {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: clamp(3px, 0.4vw, 6px) solid var(--ink);
+  overflow: hidden;
+  display: flex; align-items: flex-end; justify-content: center;
+}
+.disc img { width: 86%; image-rendering: pixelated; }
+.disc-owl { background: var(--campfire); }
+.disc-cheetah { background: var(--switchboard); }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-14px) rotate(-1.5deg); }
+}
+
+/* Landscape (wider than tall) */
+.obj-phone {
+  --dur: 9s; --delay: 0s;
+  left: 6%; top: 7%;
+  width: min(26vw, calc(46 * var(--vh)));
+}
+.obj-owl {
+  --dur: 11s; --delay: -3s;
+  right: 7%; top: 6%;
+  width: min(22vw, calc(40 * var(--vh)));
+}
+.obj-cheetah {
+  --dur: 10s; --delay: -6s;
+  left: 50%; bottom: 12%;
+  translate: -50% 0;
+  width: min(21vw, calc(40 * var(--vh)));
+}
+
+/* The four navigation pills */
+.poster-nav { position: absolute; inset: 0; z-index: 3; pointer-events: none; }
+.poster-nav .pill {
+  position: absolute;
+  pointer-events: auto;
+  font-size: clamp(20px, 2.6vw, 38px);
+}
+/* A pill lights up when its object is hovered (see the script in index.html). */
+.poster-nav .pill.is-active { background: var(--campfire); scale: 1.04; }
+
+/* 46% down, but always clear of the headline on short screens. */
+.pill-about { left: 12%; top: min(46%, calc(100% - var(--statement-clear) - 2.3em)); }
+.pill-tutorials { left: 50%; top: 20%; translate: -50% 0; }
+.pill-agents { right: 10%; top: 54%; }
+.pill-writing { right: 7%; top: 76%; }
+
+/* Headline and small print */
+.statement {
+  position: absolute;
+  z-index: 4;
+  left: var(--edge);
+  bottom: clamp(16px, 4vh, 44px);
+  /* Keep the headline to the left of the middle object. */
+  width: calc(50% - min(10.5vw, 20vh) - var(--edge) - 2vw);
+  margin: 0;
+}
+
+.headline {
+  margin: 0 0 12px;
+  color: var(--title);
+  font-weight: 800;
+  font-size: clamp(26px, min(3.6vw, 6.2vh), 56px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+.headline em {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0;
+  font-size: 1.06em;
+}
+
+/* The small print sits on a black label so it stays readable on the hills. */
+.home-note {
+  display: inline-block;
+  margin: 0;
+  background: var(--ink);
+  color: var(--title);
+  font-size: 13px;
+  line-height: 1.45;
+  padding: 7px 12px 8px;
+  border-radius: 12px;
+}
+.home-note a { color: var(--campfire); font-weight: 700; }
+.home-note a:focus-visible { outline-color: var(--title); }
+
+/* Portrait (taller than wide: phones, tablets upright) */
+@media (orientation: portrait) {
+  .obj-phone {
+    left: 3%; top: 5%;
+    width: min(56vw, calc(30 * var(--vh)));
+  }
+  .obj-owl {
+    right: 4%; top: 24%;
+    width: min(44vw, calc(24 * var(--vh)));
+    z-index: 2;
+  }
+  .obj-cheetah {
+    /* Bottom 18%, but never down into the headline. */
+    left: 42%;
+    bottom: max(18%, calc(var(--statement-clear) + 12px));
+    width: min(44vw, calc(24 * var(--vh)));
+  }
+
+  .pill-about { left: 6%; top: 40%; }
+  .pill-tutorials { left: auto; right: 5%; top: 5%; translate: none; }
+  .pill-agents { right: 6%; top: 52%; }
+  .pill-writing { right: 5%; top: min(70%, calc(100% - var(--statement-clear) - 2.6em)); }
+
+  .statement { right: var(--edge); width: auto; }
+}
+
+/* Phones turned sideways: very little height, so the headline runs
+   along the bottom and the middle object sits just above it. */
+@media (orientation: landscape) and (max-height: 500px) {
+  .statement { right: var(--edge); width: auto; bottom: 10px; }
+  .headline { font-size: clamp(18px, 5.4vh, 26px); margin-bottom: 6px; }
+  .home-note { font-size: 12px; padding: 5px 10px 6px; }
+  .obj-phone { top: 6%; width: min(26vw, calc(44 * var(--vh))); }
+  .obj-owl { width: min(20vw, calc(36 * var(--vh))); }
+  .obj-cheetah {
+    bottom: calc(var(--statement-clear) + 4px);
+    width: min(18vw, calc(32 * var(--vh)));
+  }
+  .pill-about { top: 40%; }
+  .pill-agents { top: min(54%, calc(100% - var(--statement-clear) - 2.3em)); }
+  .pill-writing { top: min(76%, calc(100% - var(--statement-clear) - 2.3em)); right: 30%; }
+}
+
+@media (orientation: portrait) and (max-width: 520px) {
+  .statement { bottom: 16px; }
+  .home-note { font-size: 12px; line-height: 1.4; }
+}
+
+/* Hover: the objects spin, one turn every 8 seconds, and stay where they
+   stopped when the mouse moves away.
+   Only with a mouse (not touch), and not for people who ask for less motion. */
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .obj { animation: spin 8s linear infinite paused; }
+  .obj:hover { animation-play-state: running; }
+}
+@keyframes spin {
+  from { rotate: 0deg; }
+  to { rotate: 360deg; }
+}
+
+/* Hovering the Writing pill: bands of light sweep across the desert, so the dunes
+   look like they're shifting. The shimmer is cut to the exact shape of the hills. */
+.hills-shimmer {
+  left: 50%;
+  bottom: 0;
+  translate: -50% 0;
+  width: 100%;
+  min-width: 1100px;
+  height: min(calc(max(100vw, 1100px) * 527 / 1920), 62%);
+  background: linear-gradient(105deg,
+    transparent 0%, transparent 34%,
+    rgba(243, 180, 66, 0.55) 41%, rgba(239, 139, 161, 0.6) 46%, rgba(241, 242, 243, 0.7) 50%,
+    rgba(106, 157, 213, 0.55) 54%, rgba(180, 68, 125, 0.4) 59%, transparent 66%, transparent 100%) 100% 0 / 300% 100% no-repeat;
+  -webkit-mask: url("/images/scene/hills.webp") center top / cover no-repeat;
+  mask: url("/images/scene/hills.webp") center top / cover no-repeat;
+  mix-blend-mode: screen;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.poster:has(.pill-writing:hover) .hills-shimmer,
+.poster:has(.pill-writing:focus-visible) .hills-shimmer { opacity: 1; }
+@media (prefers-reduced-motion: no-preference) {
+  .poster:has(.pill-writing:hover) .hills-shimmer,
+  .poster:has(.pill-writing:focus-visible) .hills-shimmer { animation: dune-shift 2.6s ease-in-out infinite; }
+}
+@keyframes dune-shift {
+  from { background-position: 100% 0; }
+  to { background-position: 0% 0; }
+}

@@ -1,120 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="is-home">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Build 52 | ahmads.build</title>
   <meta name="description" content="From AI happening to you, to AI working for you. Free AI agents to make your life easier. No code needed.">
   <link rel="icon" type="image/png" href="/images/favicon.png" media="(prefers-color-scheme: light)">
   <link rel="icon" type="image/png" href="/images/favicon-light.png" media="(prefers-color-scheme: dark)">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/brand.css?v=7fdfcc0c">
-  <script src="/assets/site.js?v=22e58986" defer></script>
-  <script src="/assets/gate.js?v=6e3728b5" defer></script>
-  <style>
-    .hero { padding-top: var(--space-24); padding-bottom: var(--space-12); }
-    .hero .display { max-width: 16ch; margin-top: var(--space-4); }
-    .hero .support { margin-top: var(--space-6); font-size: 20px; line-height: 30px; }
-    .hero .actions { margin-top: var(--space-6); display: flex; flex-wrap: wrap; gap: var(--space-4); }
-    .latest { padding-bottom: var(--space-12); }
-    .latest h2 { margin-bottom: var(--space-4); }
-    .agent-tiles { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--space-4); grid-template-columns: repeat(3, 1fr); }
-    .agent-tile { display: flex; flex-direction: column; gap: var(--space-2); }
-    .agent-tile img { display: block; width: 80px; height: 80px; border-radius: var(--radius-md); margin-bottom: var(--space-2); }
-    .agent-tile .btn { align-self: flex-start; margin-top: auto; }
-    .agent-tile p { margin-bottom: var(--space-2); }
-    @media (max-width: 1024px) {
-      .agent-tiles { grid-template-columns: 1fr; }
-    }
-    @media (max-width: 720px) {
-      .hero { padding-top: var(--space-12); padding-bottom: var(--space-6); }
-      .hero .support { font-size: 17px; line-height: 28px; }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/brand.css?v=aa751892">
+  <link rel="stylesheet" href="/assets/home.css?v=9f284783">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header">
-    <nav class="nav container" aria-label="Main">
-      <a href="/" class="logo"><img src="/images/logo.png" alt="Build 52 by Ahmad Iqbal – home" width="107" height="32"></a>
-      <div class="nav-menu" id="nav-menu">
-        <a href="/about/">About</a>
-        <a href="https://www.linkedin.com/in/ahmadiqbal1" class="btn btn-outline" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
-      <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2LftEg_0td3W-pWEFQwLBZ6LC8GmgLlSoYkhCQzig38rFytq_mOt4pI7OCqQhuaOxfuIOIdP54" class="btn btn-primary">Book a call</a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Menu">
-        <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M2 5h16M2 10h16M2 15h16" stroke="currentColor" stroke-width="2" fill="none"/></svg>
-      </button>
-    </nav>
+  <header class="banner">
+    <span class="banner-tag">One agent a week</span>
+    <a class="wordmark" href="/"><img src="/images/logo-light.png" alt="Build 52 by Ahmad Iqbal – home" width="147" height="44"></a>
+    <a class="banner-cta" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2LftEg_0td3W-pWEFQwLBZ6LC8GmgLlSoYkhCQzig38rFytq_mOt4pI7OCqQhuaOxfuIOIdP54">Book a call</a>
   </header>
 
-  <main id="main">
-    <section class="hero container" aria-labelledby="hero-title">
-      <p class="eyebrow">Build 52 · One agent a week</p>
-      <h1 id="hero-title" class="display">AI happening to you → AI working for you.</h1>
-      <p class="support">Free AI agents to make your life easier. No code needed.</p>
-      <div class="actions">
-        <a href="/agents/" class="btn btn-warm">See the agents</a>
-      </div>
-    </section>
+  <main class="poster" id="main">
+    <div class="scene" role="img" aria-label="A collage: a rotary telephone, a pixel-art owl in blue sunglasses and a pixel-art cheetah in red sunglasses float in a blue sky above red and purple hills.">
+      <img class="layer stars" src="/images/scene/stars.webp" alt="" width="1920" height="1080">
+      <img class="layer hills" src="/images/scene/hills.webp" alt="" width="1920" height="527">
+      <div class="layer hills-shimmer" aria-hidden="true"></div>
+      <div class="obj obj-phone" data-link="about"><span class="obj-inner"><img src="/images/scene/phone.webp" alt="" width="900" height="777"></span></div>
+      <div class="obj obj-owl" data-link="agents"><span class="obj-inner disc disc-owl"><img src="/images/scene/owl.webp" alt="" width="699" height="687"></span></div>
+      <div class="obj obj-cheetah" data-link="tutorials"><span class="obj-inner disc disc-cheetah"><img src="/images/scene/cheetah.webp" alt="" width="609" height="675"></span></div>
+    </div>
 
-    <section class="latest container" aria-labelledby="latest-title">
-      <h2 id="latest-title" class="eyebrow">Latest agents</h2>
-      <ul class="agent-tiles">
-        <li class="card agent-tile">
-          <img src="/images/agents/advisory-council.png" alt="" width="80" height="80">
-          <h3>Advisory council</h3>
-          <p>Bring a decision to Socrates, Sun Tzu, Marshall McLuhan and Marcus Aurelius, and hear each one answer in their own words.</p>
-          <a href="https://advisorycouncil.ahmads.build" class="btn btn-outline" aria-label="Add the advisory council agent" data-gate="agent">Add to Claude</a>
-        </li>
-        <li class="card agent-tile">
-          <img src="/images/agents/chief-of-staff.png" alt="" width="80" height="80">
-          <h3>Chief of staff</h3>
-          <p>Morning briefings, inbox sorting, meeting prep and a thought partner, working with Gmail and Google Calendar.</p>
-          <a href="https://chiefofstaff.ahmads.build" class="btn btn-outline" aria-label="Install the chief of staff agent" data-gate="agent">Install</a>
-        </li>
-      </ul>
-    </section>
+    <nav class="poster-nav" aria-label="Main">
+      <a class="pill pill-writing" href="/writing/">Writing</a>
+      <a class="pill pill-agents" href="/agents/">Agents</a>
+      <a class="pill pill-tutorials" href="/resources/">Tutorials</a>
+      <a class="pill pill-about" href="/about/">About</a>
+    </nav>
 
+    <div class="statement">
+      <h1 class="headline">AI happening to you → <em>AI working for you.</em></h1>
+      <p class="home-note">Build 52: one agent a week, by <a href="/about/">Ahmad Iqbal</a>. Free AI agents to make your life easier. No code needed.</p>
+    </div>
   </main>
-  <section class="site-cards container" aria-label="Explore the site">
-    <div class="cards">
-      <article class="card">
-        <h2 class="h3">Writing</h2>
-        <p>Weekly notes on what I'm building and learning.</p>
-        <a href="/writing/" class="card-link">Read the latest</a>
-      </article>
-      <article class="card">
-        <h2 class="h3">Build with me</h2>
-        <p>Templates and guides to build your own agents.</p>
-        <a href="/resources/" class="card-link">See the guides</a>
-      </article>
-      <article class="card">
-        <h2 class="h3">Agents</h2>
-        <p>Ready-made agents to install in Claude. No code needed.</p>
-        <a href="/agents/" class="card-link">Install an agent</a>
-      </article>
-    </div>
-  </section>
 
+  <script>
+    // Each object goes with a pill: phone = About, owl = Agents, cheetah = Tutorials.
+    // Hovering an object lights up its pill; clicking (or tapping) it opens that page.
+    (function () {
+      document.querySelectorAll(".obj[data-link]").forEach(function (obj) {
+        var pill = document.querySelector(".pill-" + obj.dataset.link);
+        if (!pill) return;
+        obj.addEventListener("mouseenter", function () { pill.classList.add("is-active"); });
+        obj.addEventListener("mouseleave", function () { pill.classList.remove("is-active"); });
+        obj.addEventListener("click", function () { window.location.href = pill.href; });
+      });
+    })();
 
-  <footer class="site-footer on-dark">
-    <div class="container">
-      <p class="main-line">AI happening to you → AI working for you.</p>
-      <ul class="footer-links">
-        <li><a href="/about/">About</a></li>
-        <li><a href="/writing/">Writing</a></li>
-        <li><a href="/resources/">Build with me</a></li>
-        <li><a href="/agents/">Agents</a></li>
-        <li><a href="/office-hours/">Office hours</a></li>
-        <li><a href="https://www.linkedin.com/in/ahmadiqbal1" target="_blank" rel="noopener">LinkedIn</a></li>
-      </ul>
-      <p class="copyright">© 2026 Ahmad Iqbal · ahmads.build</p>
-    </div>
-  </footer>
-
+    // Tell the layout how tall the headline block is, so nothing sits on it.
+    (function () {
+      var poster = document.querySelector(".poster");
+      var statement = document.querySelector(".statement");
+      if (!poster || !statement || !("ResizeObserver" in window)) return;
+      function measure() {
+        var clear = poster.getBoundingClientRect().bottom - statement.getBoundingClientRect().top;
+        poster.style.setProperty("--statement-clear", Math.ceil(clear) + "px");
+      }
+      new ResizeObserver(measure).observe(statement);
+      window.addEventListener("resize", measure);
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
+      measure();
+    })();
+  </script>
 </body>
 </html>
