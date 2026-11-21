@@ -80,18 +80,6 @@ html.is-home body {
   -webkit-user-drag: none;
 }
 
-/* The agents ride in discs, like moons: a flat colour, a thick ink outline. */
-.disc {
-  aspect-ratio: 1;
-  border-radius: 50%;
-  border: clamp(3px, 0.4vw, 6px) solid var(--ink);
-  overflow: hidden;
-  display: flex; align-items: flex-end; justify-content: center;
-}
-.disc img { width: 86%; image-rendering: pixelated; }
-.disc-owl { background: var(--campfire); }
-.disc-cheetah { background: var(--switchboard); }
-
 @keyframes float {
   0%, 100% { transform: translateY(0) rotate(0deg); }
   50% { transform: translateY(-14px) rotate(-1.5deg); }
@@ -105,14 +93,14 @@ html.is-home body {
 }
 .obj-owl {
   --dur: 11s; --delay: -3s;
-  right: 7%; top: 6%;
-  width: min(22vw, calc(40 * var(--vh)));
+  right: 9%; top: 4%;
+  width: min(15vw, calc(29 * var(--vh)));
 }
 .obj-cheetah {
   --dur: 10s; --delay: -6s;
   left: 50%; bottom: 12%;
   translate: -50% 0;
-  width: min(21vw, calc(40 * var(--vh)));
+  width: min(24vw, calc(46 * var(--vh)));
 }
 
 /* The four navigation pills */
@@ -138,7 +126,7 @@ html.is-home body {
   left: var(--edge);
   bottom: clamp(16px, 4vh, 44px);
   /* Keep the headline to the left of the middle object. */
-  width: calc(50% - min(10.5vw, 20vh) - var(--edge) - 2vw);
+  width: calc(50% - min(12vw, 23vh) - var(--edge) - 2vw);
   margin: 0;
 }
 
@@ -180,15 +168,15 @@ html.is-home body {
     width: min(56vw, calc(30 * var(--vh)));
   }
   .obj-owl {
-    right: 4%; top: 24%;
-    width: min(44vw, calc(24 * var(--vh)));
+    right: 6%; top: 20%;
+    width: min(30vw, calc(17 * var(--vh)));
     z-index: 2;
   }
   .obj-cheetah {
     /* Bottom 18%, but never down into the headline. */
-    left: 42%;
+    left: 40%;
     bottom: max(18%, calc(var(--statement-clear) + 12px));
-    width: min(44vw, calc(24 * var(--vh)));
+    width: min(50vw, calc(27 * var(--vh)));
   }
 
   .pill-about { left: 6%; top: 40%; }
@@ -206,7 +194,7 @@ html.is-home body {
   .headline { font-size: clamp(18px, 5.4vh, 26px); margin-bottom: 6px; }
   .home-note { font-size: 12px; padding: 5px 10px 6px; }
   .obj-phone { top: 6%; width: min(26vw, calc(44 * var(--vh))); }
-  .obj-owl { width: min(20vw, calc(36 * var(--vh))); }
+  .obj-owl { width: min(13vw, calc(27 * var(--vh))); }
   .obj-cheetah {
     bottom: calc(var(--statement-clear) + 4px);
     width: min(18vw, calc(32 * var(--vh)));
