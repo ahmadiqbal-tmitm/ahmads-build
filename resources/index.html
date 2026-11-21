@@ -3,43 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Build with me | ahmads.build</title>
+  <title>Tutorials | ahmads.build</title>
   <meta name="description" content="Step-by-step guides and copy-paste templates to build your own AI agents. No code needed.">
   <link rel="icon" type="image/png" href="/images/favicon.png" media="(prefers-color-scheme: light)">
   <link rel="icon" type="image/png" href="/images/favicon-light.png" media="(prefers-color-scheme: dark)">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/brand.css?v=7fdfcc0c">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/brand.css?v=aa751892">
   <script src="/assets/site.js?v=22e58986" defer></script>
   <style>
     .back { display: inline-flex; align-items: center; min-height: 44px; margin-bottom: var(--space-4); }
     .res-cards { margin-top: var(--space-12); grid-template-columns: 1fr; }
-    .agent-avatar { display: block; width: 96px; height: 96px; border-radius: var(--radius-md); margin-bottom: var(--space-2); }
+    .agent-avatar { display: block; width: 96px; height: 96px; border-radius: var(--radius); margin-bottom: var(--space-2); }
     .more { margin-top: var(--space-6); color: var(--ink-muted); }
   </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header">
-    <nav class="nav container" aria-label="Main">
-      <a href="/" class="logo"><img src="/images/logo.png" alt="Build 52 by Ahmad Iqbal – home" width="107" height="32"></a>
-      <div class="nav-menu" id="nav-menu">
-        <a href="/about/">About</a>
-        <a href="https://www.linkedin.com/in/ahmadiqbal1" class="btn btn-outline" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
-      <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2LftEg_0td3W-pWEFQwLBZ6LC8GmgLlSoYkhCQzig38rFytq_mOt4pI7OCqQhuaOxfuIOIdP54" class="btn btn-primary">Book a call</a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Menu">
-        <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M2 5h16M2 10h16M2 15h16" stroke="currentColor" stroke-width="2" fill="none"/></svg>
-      </button>
-    </nav>
+  <header class="banner">
+    <span class="banner-tag">One agent a week</span>
+    <a class="wordmark" href="/"><img src="/images/logo-light.png" alt="Build 52 by Ahmad Iqbal – home" width="147" height="44"></a>
+    <a class="banner-cta" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2LftEg_0td3W-pWEFQwLBZ6LC8GmgLlSoYkhCQzig38rFytq_mOt4pI7OCqQhuaOxfuIOIdP54">Book a call</a>
   </header>
 
   <main id="main" class="page">
     <div class="container"><div class="reading">
       <a href="/" class="back">← Home</a>
-      <h1>Build with me</h1>
+      <h1>Tutorials</h1>
       <p class="page-intro">Step-by-step guides and copy-paste templates to build your own AI agents. You don't need to code. No jargon.</p>
 
       <div class="cards res-cards">
@@ -80,31 +72,41 @@
         <a href="/writing/" class="card-link">Read the latest</a>
       </article>
       <article class="card">
-        <h2 class="h3">Build with me</h2>
+        <h2 class="h3">Agents</h2>
+        <p>Ready-made agents to install in Claude. No code needed.</p>
+        <a href="/agents/" class="card-link">Install an agent</a>
+      </article>
+      <article class="card">
+        <h2 class="h3">Tutorials</h2>
         <p>Templates and guides to build your own agents.</p>
         <a href="/resources/" class="card-link" aria-current="page">See the guides</a>
       </article>
       <article class="card">
-        <h2 class="h3">Agents</h2>
-        <p>Ready-made agents to install in Claude. No code needed.</p>
-        <a href="/agents/" class="card-link">Install an agent</a>
+        <h2 class="h3">About</h2>
+        <p>Who I am, and why I'm building one agent a week.</p>
+        <a href="/about/" class="card-link">Meet Ahmad</a>
       </article>
     </div>
   </section>
 
 
   <footer class="site-footer on-dark">
-    <div class="container">
-      <p class="main-line">AI happening to you → AI working for you.</p>
-      <ul class="footer-links">
-        <li><a href="/about/">About</a></li>
-        <li><a href="/writing/">Writing</a></li>
-        <li><a href="/resources/">Build with me</a></li>
-        <li><a href="/agents/">Agents</a></li>
-        <li><a href="/office-hours/">Office hours</a></li>
-        <li><a href="https://www.linkedin.com/in/ahmadiqbal1" target="_blank" rel="noopener">LinkedIn</a></li>
-      </ul>
-      <p class="copyright">© 2026 Ahmad Iqbal · ahmads.build</p>
+    <div class="container inner">
+      <div>
+        <a class="wordmark" href="/"><img src="/images/logo-light.png" alt="Build 52 – home" width="133" height="40"></a>
+        <ul class="footer-links">
+          <li><a href="/writing/">Writing</a></li>
+          <li><a href="/agents/">Agents</a></li>
+          <li><a href="/resources/">Tutorials</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/office-hours/">Office hours</a></li>
+          <li><a href="https://www.linkedin.com/in/ahmadiqbal1" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="main-line">AI happening to you → <em>AI working for you.</em></p>
+        <p class="copyright">© 2026 Ahmad Iqbal · ahmads.build</p>
+      </div>
     </div>
   </footer>
 
