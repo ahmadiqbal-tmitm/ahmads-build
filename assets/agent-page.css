@@ -1,0 +1,98 @@
+/* Agent pages: chiefofstaff, advisorycouncil and salesagent .ahmads.build.
+   Load after brand.css, with <body class="agent-page">.
+   Long reading text is set in a regular-weight serif; Bricolage is used only for
+   headings, labels, buttons and the site frame, so only titles read as bold. */
+
+:root {
+  --body-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  /* Older agent pages use these names. */
+  --card: #f6f5f3;
+  --line: #e3e0e6;
+  --radius-md: var(--radius-sm);
+}
+
+/* Body text */
+body.agent-page {
+  font-family: var(--body-serif);
+  font-size: 19px;
+  line-height: 1.65;
+  font-weight: 400;
+  color: var(--ink);
+}
+.agent-page p,
+.agent-page li,
+.agent-page dd { font-weight: 400; }
+.agent-page strong,
+.agent-page b { font-weight: 600; }
+.agent-page code { font-family: var(--font-mono); font-size: 0.85em; }
+.agent-page pre code { font-size: inherit; }
+
+/* Headings and labels: the only bold, sans-serif text */
+.agent-page h1,
+.agent-page h2,
+.agent-page h3,
+.agent-page .h3,
+.agent-page dt,
+.agent-page .eyebrow,
+.agent-page .back,
+.agent-page .btn,
+.agent-page .card-link,
+.agent-page .tag,
+.agent-page .code-label,
+.agent-page .gate-form label,
+.agent-page .gate-form button,
+.agent-page .banner,
+.agent-page .site-footer { font-family: var(--font); }
+
+.agent-page h1 {
+  font-size: clamp(38px, 5.4vw, 60px);
+  line-height: 1.04;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  max-width: 20ch;
+}
+.agent-page main h2 {
+  font-size: clamp(26px, 2.8vw, 32px);
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+.agent-page h3,
+.agent-page .h3 {
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.005em;
+}
+.agent-page dt { font-size: 18px; line-height: 1.4; font-weight: 700; }
+.agent-page dd { line-height: 1.6; }
+.agent-page .eyebrow { font-weight: 600; }
+.agent-page .back { font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; color: var(--ink-muted); }
+.agent-page .back:hover { color: var(--ink); }
+
+/* Intro */
+.agent-page .lede { font-size: clamp(20px, 2vw, 23px); line-height: 1.5; font-weight: 400; }
+.agent-page .install-note { font-size: 18px; }
+.agent-page .time {
+  font-family: var(--body-serif);
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--ink-muted);
+}
+
+/* Panels, code and sidebar */
+.agent-page .why { font-size: 18px; }
+.agent-page .code-label { font-weight: 500; }
+.agent-page aside.side .card { font-size: 17px; line-height: 1.6; }
+.agent-page aside.side h2 { font-size: 20px; line-height: 1.25; font-weight: 700; letter-spacing: 0; }
+.agent-page .build-note { font-size: 16px; }
+
+/* Explore cards under the page */
+.agent-page .site-cards .card p { font-size: 17px; line-height: 1.55; }
+
+@media (max-width: 720px) {
+  body.agent-page { font-size: 18px; }
+  .agent-page .lede { font-size: 19px; }
+}
